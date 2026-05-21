@@ -6,11 +6,11 @@ namespace StringGenerator
 
     public class View
     {
-        public string Output()
+        public string Output(string chars)
         {
-            return "";
+            return ;
         }
-        public string IfNotInteger()
+        public static string IfNotInteger()
         {
             return "Nope";
         }

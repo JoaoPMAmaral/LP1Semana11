@@ -5,9 +5,9 @@ namespace StringGenerator
 
     public class Model
     {
-        public void IntegerCheck(string text)
+        public void IntegerCheck(string  text)
         {
-            if(!(text <= 0) || !(text >= 0))
+            if(!(int.Parse(text) <= 0) || !(int.Parse(text) >= 0))
             {
                 View.IfNotInteger();
             }

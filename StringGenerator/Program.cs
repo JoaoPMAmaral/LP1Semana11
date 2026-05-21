@@ -7,9 +7,7 @@ namespace StringGenerator
     public class Generator
     {
         private const string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-
         Controller controller = new Controller(chars);
-
     }
 
     class Program
