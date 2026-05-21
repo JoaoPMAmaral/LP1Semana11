@@ -4,11 +4,16 @@ using System.Text;
 namespace StringGenerator
 {
 
-    public class Generator
+    public class Controller
     {
-        private const string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        private string chars;
 
-        public static string Generate(int seed, int length = 16)
+        public Controller(string chars)
+        {
+            this.chars = chars;
+        }
+
+        public string Generate(int seed, int length = 16)
         {
             Random rng = new Random(seed);
 
@@ -21,18 +26,6 @@ namespace StringGenerator
             }
 
             return result.ToString();
-        }
-    }
-
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            int seed = int.Parse(args[0]);
-
-            string output = Generator.Generate(seed);
-
-            Console.WriteLine(output);
         }
     }
 }

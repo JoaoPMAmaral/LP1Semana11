@@ -4,35 +4,15 @@ using System.Text;
 namespace StringGenerator
 {
 
-    public class Generator
+    public class View
     {
-        private const string chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-
-        public static string Generate(int seed, int length = 16)
+        public string Output()
         {
-            Random rng = new Random(seed);
-
-            StringBuilder result = new StringBuilder(length);
-
-            for (int i = 0; i < length; i++)
-            {
-                int index = rng.Next(chars.Length);
-                result.Append(chars[index]);
-            }
-
-            return result.ToString();
+            return "";
         }
-    }
-
-    class Program
-    {
-        static void Main(string[] args)
+        public string IfNotInteger()
         {
-            int seed = int.Parse(args[0]);
-
-            string output = Generator.Generate(seed);
-
-            Console.WriteLine(output);
+            return "Nope";
         }
     }
 }
